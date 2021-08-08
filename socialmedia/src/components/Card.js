@@ -42,7 +42,9 @@ function Card(props) {
       </div>
       <div className="timePosted">{hours} HOURS AGO</div>
       <div className="addComment">
-        <div className="commentText">Add a comment...</div>
+        <label>Say something...</label>
+        <input className="comments" type="text"></input>
+        {/* <div className="commentText">Add a comment...</div> */}
         <button className="postText">Post</button>
       </div>
     </div>

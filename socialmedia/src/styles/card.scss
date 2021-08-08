@@ -63,6 +63,13 @@
       color: $font-color-secondary;
     }
 
+    .comments {
+      display: flex;
+      width: 335px;
+      height: 25px;
+      border: 1px solid lightpink;
+    }
+
     .postText {
       color: $link-color-secondary;
     }
