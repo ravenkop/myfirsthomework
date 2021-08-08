@@ -14,7 +14,7 @@ function Navigation() {
         <img className="logo" src={logo} alt="instagram logo" />
         <div className="search">
           {/* <img className="searchIcon" src={searchIcon} alt="search icon" /> */}
-          <input type="text" />
+          <input className="boxed" type="text" />
           <button className="searchText">Search</button>
         </div>
         <Menu />

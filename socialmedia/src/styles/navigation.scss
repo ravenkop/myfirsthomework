@@ -26,9 +26,9 @@
     }
 
     .search {
-      border: 1px solid $border-color-grey;
-      border-radius: 3px;
-      background-color: $background-grey;
+      // border: 0px solid $border-color-grey;
+      border-radius: 10px;
+      // background-color: $background-grey;
       min-width: 225px;
       display: flex;
       align-items: center;
@@ -38,12 +38,19 @@
         width: 10px;
         opacity: 0.4;
         margin-right: 0.3em;
+        border-radius: 10px;
+      }
+
+      .boxed {
+        border-radius: 10px;
+
       }
 
       .searchText {
-        color: $font-color-secondary;
+        color: lightskyblue;
         font-size: 0.85em;
         font-weight: 300;
+        border-radius: 10px;
       }
     }
   }
