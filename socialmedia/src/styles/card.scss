@@ -68,10 +68,13 @@
       width: 335px;
       height: 25px;
       border: 1px solid lightskyblue;
+      border-radius: 10px;
     }
 
     .postText {
       color: $link-color-secondary;
+      height: 30px;
+      border-radius: 10px;
     }
   }
 }
