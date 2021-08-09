@@ -24,7 +24,7 @@ function Cards() {
   const commentsTwo = [
     {
       user: "mapvault",
-      text: "You have the nicest posts I have ever seen!",
+      text: "You have such creative posts!",
       id: 4,
     },
   ];
