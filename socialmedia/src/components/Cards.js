@@ -37,6 +37,7 @@ function Cards() {
       id: 5,
     },
   ];
+
   const [comment, setComment] = useState([
     {
       user: "another person",

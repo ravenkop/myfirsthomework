@@ -4,7 +4,9 @@ import logo from "../images/instagramLogo.png";
 // import searchIcon from "../images/searchIcon.png";
 
 
-
+function handleSubmit(e) {
+  e.preventDefault();
+}
 
 
 
@@ -18,7 +20,7 @@ function Navigation() {
         <div className="search">
           {/* <img className="searchIcon" src={searchIcon} alt="search icon" /> */}
           <input className="boxed" type="text" />
-          <button className="searchText">Search</button>
+          <button className="searchText" onClick={handleSubmit}>Search</button>
         </div>
         <Menu />
       </div>
