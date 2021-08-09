@@ -12,6 +12,9 @@ function Card(props) {
     likedByText,
     likedByNumber,
     hours,
+    inputValue,
+    handleChange,
+    handleSubmit
   } = props;
 
   return (
@@ -43,9 +46,8 @@ function Card(props) {
       <div className="timePosted">{hours} HOURS AGO</div>
       <div className="addComment">
         <label>Say something...</label>
-        <input className="comments" type="text"></input>
-        {/* <div className="commentText">Add a comment...</div> */}
-        <button className="postText">Post</button>
+        <input className="comments" type="text" value={inputValue} onChange={handleChange}></input>
+        <button className="postText" onClick={handleSubmit}>Post</button>
       </div>
     </div>
   );

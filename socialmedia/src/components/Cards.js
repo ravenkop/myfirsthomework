@@ -1,6 +1,7 @@
 import "../styles/cards.scss";
 import Stories from "./Stories";
 import Card from "./Card";
+import { useState } from "react";
 
 function Cards() {
   const commentsOne = [
@@ -36,13 +37,39 @@ function Cards() {
       id: 5,
     },
   ];
+  const [comment, setComment] = useState([
+    {
+      user: "another person",
+      time: "recently",
+      id: 6
+    }
+  ]);
+  const [inputValue, setInputValue] = useState("");
 
+  function handleChange(e) {
+    setInputValue(e.target.value);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    let newCommentsList = [
+    {
+      user: "current user",
+      text: {inputValue},
+      id: 7
+    }]
+    console.log(newCommentsList);
+    setComment([newCommentsList]);
+  }
   return (
     <div className="cards">
       <Stories />
 
       <Card
         accountName="rastafarri"
+        inputValue={inputValue}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
         storyBorder={true}
         image="https://picsum.photos/800/900"
         comments={commentsOne}
@@ -52,6 +79,9 @@ function Cards() {
       />
       <Card
         accountName="mapquest2003"
+        inputValue={inputValue}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
         image="https://picsum.photos/800"
         comments={commentsTwo}
         likedByText="therealadamsandler"
@@ -60,6 +90,21 @@ function Cards() {
       />
       <Card
         accountName="dababy251489"
+        inputValue={inputValue}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        storyBorder={true}
+        image="https://picsum.photos/800/1000"
+        comments={commentsThree}
+        likedByText="doraexplorer93"
+        likedByNumber={90}
+        hours={4}
+      />
+      <Card
+        accountName="dababy251489"
+        inputValue={inputValue}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
         storyBorder={true}
         image="https://picsum.photos/800/1000"
         comments={commentsThree}
