@@ -5,7 +5,7 @@ import Card from "./Card";
 function Cards() {
   const commentsOne = [
     {
-      user: "raffagrassetti",
+      user: "raggedymuffin",
       text: "Never seen something so cool!!",
       id: 1,
     },
@@ -15,7 +15,7 @@ function Cards() {
       id: 2,
     },
     {
-      user: "mapvault",
+      user: "mapquest",
       text: "Woot, woot!!!",
       id: 3,
     },
@@ -23,7 +23,7 @@ function Cards() {
 
   const commentsTwo = [
     {
-      user: "mapvault",
+      user: "dora",
       text: "You have such creative posts!",
       id: 4,
     },
@@ -31,7 +31,7 @@ function Cards() {
 
   const commentsThree = [
     {
-      user: "dadatlacak",
+      user: "Nanee",
       text: "Very cool! ",
       id: 5,
     },
@@ -42,28 +42,28 @@ function Cards() {
       <Stories />
 
       <Card
-        accountName="rafagrassetti"
+        accountName="rastafarri"
         storyBorder={true}
         image="https://picsum.photos/800/900"
         comments={commentsOne}
-        likedByText="dadatlacak"
+        likedByText="dadatogottso"
         likedByNumber={89}
         hours={16}
       />
       <Card
-        accountName="mapvault"
+        accountName="mapquest2003"
         image="https://picsum.photos/800"
         comments={commentsTwo}
-        likedByText="therealadamsavage"
+        likedByText="therealadamsandler"
         likedByNumber={47}
         hours={12}
       />
       <Card
-        accountName="dadatlacak"
+        accountName="dababy251489"
         storyBorder={true}
         image="https://picsum.photos/800/1000"
         comments={commentsThree}
-        likedByText="mapvault"
+        likedByText="doraexplorer93"
         likedByNumber={90}
         hours={4}
       />
