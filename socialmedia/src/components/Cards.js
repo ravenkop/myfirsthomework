@@ -89,6 +89,7 @@ function Cards() {
         accountName="mapquest2003"
         inputValue={inputValue}
         handleChange={handleChange}
+        addComment={content => addNewComment(content, 2)}
         // handleSubmit={handleSubmit}
         image="https://picsum.photos/800"
         comments={commentsTwo}
@@ -100,6 +101,7 @@ function Cards() {
         accountName="dababy251489"
         inputValue={inputValue}
         handleChange={handleChange}
+        addComment={content => addNewComment(content, 3)}
         // handleSubmit={handleSubmit}
         storyBorder={true}
         image="https://picsum.photos/800/1000"
