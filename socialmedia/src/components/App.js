@@ -2,6 +2,7 @@ import "../styles/App.scss";
 import Navigation from "./Navigation";
 import Cards from "./Cards";
 import Sidebar from "./Sidebar";
+import SearchPage from './SearchPage';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Cards />
           <Sidebar />
         </div>
+
       </main>
     </div>
   );

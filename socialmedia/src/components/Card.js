@@ -3,8 +3,10 @@ import Profile from "./Profile";
 import { ReactComponent as CardButton } from "../images/cardButton.svg";
 import CardMenu from "./CardMenu";
 import Comment from "./Comment";
+import {useState} from 'react';
 
 function Card(props) {
+
   const {
     storyBorder,
     image,
@@ -14,8 +16,22 @@ function Card(props) {
     hours,
     inputValue,
     handleChange,
-    handleSubmit
+    // handleSubmit,
+    addComment
   } = props;
+
+  const [comment, setComment] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if(comment == "") {
+      return;
+    }
+    props.addComment(comment);
+    setComment("");
+
+  }
+
 
   return (
     <div className="card">
@@ -44,13 +60,18 @@ function Card(props) {
         })}
       </div>
       <div className="timePosted">{hours} HOURS AGO</div>
-      <div className="addComment">
+      <form className="addComment" onSubmit={e => handleSubmit(e)}>
         <label>Say something...</label>
-        <input className="comments" type="text" value={inputValue} onChange={handleChange}></input>
-        <button className="postText" onClick={handleSubmit}>Post</button>
-      </div>
+        <input className="comments" type="text" value={comment} onChange={e => setComment(e.target.value)}></input>
+        <button className="postText">Post</button>
+      </form>
     </div>
   );
 }
 
 export default Card;
+{/* <form className="addComment">
+<label>Say something...</label>
+<input className="comments" type="text" value={inputValue} onChange={handleChange}></input>
+<button className="postText" onClick={RANDO} id="HELP">Post</button>
+</form> */}

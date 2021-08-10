@@ -4,7 +4,7 @@ import Card from "./Card";
 import { useState } from "react";
 
 function Cards() {
-  const commentsOne = [
+  const [commentsOne, setCommentsOne] = useState([
     {
       user: "raggedymuffin",
       text: "Never seen something so cool!!",
@@ -20,48 +20,55 @@ function Cards() {
       text: "Woot, woot!!!",
       id: 3,
     },
-  ];
+  ]);
 
-  const commentsTwo = [
+
+  const [commentsTwo, setCommentsTwo] = useState([
     {
       user: "dora",
       text: "You have such creative posts!",
       id: 4,
     },
-  ];
+  ]);
 
-  const commentsThree = [
+  const [commentsThree, setCommentsThree] = useState([
     {
       user: "Nanee",
       text: "Very cool! ",
       id: 5,
     },
-  ];
-
-  const [comment, setComment] = useState([
-    {
-      user: "another person",
-      time: "recently",
-      id: 6
-    }
   ]);
+
   const [inputValue, setInputValue] = useState("");
 
   function handleChange(e) {
     setInputValue(e.target.value);
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    let newCommentsList = [
-    {
-      user: "current user",
-      text: {inputValue},
-      id: 7
-    }]
-    console.log(newCommentsList);
-    setComment([newCommentsList]);
+  function addNewComment(content, commentList) {
+
+
+    if(commentList == 1) {
+
+      const newComment = {user: "boba.gal", text: content, id: (commentsOne.length + 1)};
+
+      setCommentsOne([...commentsOne, newComment]);
   }
+    if(commentList == 2) {
+
+      const newComment = {user: "boba.gal", text: content, id: (commentsTwo.length + 1)};
+
+      setCommentsTwo([...commentsTwo, newComment]);
+  }
+    if(commentList == 3) {
+
+      const newComment = {user: "boba.gal", text: content, id: (commentsThree.length + 1)};
+
+      setCommentsThree([...commentsThree, newComment]);
+  }
+
+}
+
   return (
     <div className="cards">
       <Stories />
@@ -70,7 +77,7 @@ function Cards() {
         accountName="rastafarri"
         inputValue={inputValue}
         handleChange={handleChange}
-        handleSubmit={handleSubmit}
+        addComment={content => addNewComment(content, 1)}
         storyBorder={true}
         image="https://picsum.photos/800/900"
         comments={commentsOne}
@@ -82,7 +89,7 @@ function Cards() {
         accountName="mapquest2003"
         inputValue={inputValue}
         handleChange={handleChange}
-        handleSubmit={handleSubmit}
+        // handleSubmit={handleSubmit}
         image="https://picsum.photos/800"
         comments={commentsTwo}
         likedByText="therealadamsandler"
@@ -93,19 +100,7 @@ function Cards() {
         accountName="dababy251489"
         inputValue={inputValue}
         handleChange={handleChange}
-        handleSubmit={handleSubmit}
-        storyBorder={true}
-        image="https://picsum.photos/800/1000"
-        comments={commentsThree}
-        likedByText="doraexplorer93"
-        likedByNumber={90}
-        hours={4}
-      />
-      <Card
-        accountName="dababy251489"
-        inputValue={inputValue}
-        handleChange={handleChange}
-        handleSubmit={handleSubmit}
+        // handleSubmit={handleSubmit}
         storyBorder={true}
         image="https://picsum.photos/800/1000"
         comments={commentsThree}
