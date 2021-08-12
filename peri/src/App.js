@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+
 import React from 'react';
 
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-
+      <h1>Welcome To Peri Moda</h1>
     </div>
   );
 }
